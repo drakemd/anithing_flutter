@@ -22,6 +22,8 @@ Uri buildUrl(String sortBy, String pageLimit, String pageOffset, bool current, S
     qparams = "$qparams&$currentFilterKey=current";
   }
 
+  qparams = "$qparams&include=genres";
+
   Uri url = Uri.parse(Strings.basicUrl).replace(query: qparams);
 
   print("xxx " + url.toString());
